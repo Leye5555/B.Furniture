@@ -1,0 +1,24 @@
+//imports
+@use "./utils" as utils;
+
+::-webkit-scrollbar{
+    width: 9px;
+  cursor: pointer;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsla(34, 34%, 21%, 1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(253, 231, 203);
+  height: 100px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: utils.$scd-clr;
+  font-size : 20px;
+}
