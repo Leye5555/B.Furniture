@@ -68,7 +68,7 @@
     &-button-container {
       margin-top: 32px;
       padding-left: clamp(16px, 5vw, 94px);
-      width: fit-content;
+      width: 100%;
     }
     &-button {
       font-family: "Noto Serif";
@@ -79,7 +79,7 @@
       color: hsla(34, 34%, 21%, 1);
       border: none;
       cursor: pointer;
-      max-width: 230px;
+      max-width: clamp(160px, 20vw, 230px);
       height: clamp(45px, 8vw ,65px);
       padding: 0.35em 1.1em;
       transition: background-color 0.2s ease-in-out;
@@ -151,7 +151,7 @@
    }
      
   div:nth-child(1) {
-    background-image: url("../../assets/images/hero1.png");
+    background-image: url("https://res.cloudinary.com/aaeon/image/upload/v1654103310/B-furniture/images/hero1_qpsjt9.png");
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@
 
   }
   div:nth-child(2) {
-    background-image: url("../../assets/images/hero2.svg");
+    background-image: url("https://res.cloudinary.com/aaeon/image/upload/v1654103310/B-furniture/images/hero2_orzlqd.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -183,7 +183,7 @@
     margin-bottom : 66px;
   }
   div:nth-child(3) {
-    background-image: url("../../assets/images/hero3.svg");
+    background-image: url("https://res.cloudinary.com/aaeon/image/upload/v1654103311/B-furniture/images/hero3_u3g3yv.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

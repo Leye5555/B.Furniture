@@ -1,0 +1,113 @@
+@use "../../styles/utils/" as utils;
+
+.section-three {
+  background-color: utils.$scd-clr;
+  width: min(100vw, 1474px);
+  // outline: 1px solid;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 80px;
+  > div {
+    flex : 1;
+  }
+}
+.section-three-form {
+  min-height: 900px;
+  width: 100%;
+  max-width: 1047px;
+  border-radius: 0px;
+  background-color: utils.$pry-clr;
+  position: relative;
+  color: utils.$scd-clr;
+  display: flex;
+  justify-content: center;
+  padding: clamp(70px, 10vw, 102px) 0;
+  @media screen and (max-width : 1025px) {
+    min-height: 700px;
+  }
+
+  form {
+    width: min(calc(100% - 2em), 583px);
+    // outline: 1px solid utils.$scd-clr;
+  //  margin-left : clamp(1em, 20vw, 277px);
+   height: max-content;
+   @media screen and (max-width : 1200px) {
+    padding-right: 70px;
+   }
+   @media screen and (max-width : 768px) {
+     padding : 0;
+   }
+  }
+
+  legend {
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 24px;
+  }
+
+  label {
+    font-family: "Times New Roman", Times, serif;
+    display: block;
+    margin-bottom: clamp(16px, 4vw, 22px);
+    input {
+      position: relative;
+      z-index: 2;
+      display: block;
+      font-family: "Noto Serif";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      width: 100%;
+      margin-top: clamp(10px, 2vw, 22px);
+      min-height: clamp(25px, 5vw, 51px);
+      border: none;
+      /* identical to box height */
+    }
+   textarea {
+      min-height: clamp(250px, 30vw, 284px);
+      width: 100%;
+      display: block;
+    }
+  }
+}
+.section-three-hero {
+  position: relative;
+  max-width: 413px;
+  > img {
+     max-width: 100%;
+  margin-left : max(-102px, calc(50px - 10vw));
+  align-self: center;
+  @media screen and (max-width : 768px) {
+     display: none;
+  }
+  }
+  @media screen and (max-width : 1025px){
+   > img {
+    max-height: 650px;
+      
+    }
+  }
+  @media screen and (max-width: 768px) {
+    position: absolute;
+   color : #13485f;
+   display : none;
+  }
+    
+  
+}
+
+
+
+.contact-btn {
+  margin-top: 42px;
+  display: block;
+  @media screen and (max-width : 768px) {
+    margin: 42px auto 0;
+  }
+}

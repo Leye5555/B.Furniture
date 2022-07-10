@@ -1,0 +1,115 @@
+@use "../../styles/utils/" as utils;
+.footer-container {
+  background-color: utils.$pry-clr;
+  min-height: 460px;
+  color: utils.$scd-clr;
+  padding: 46px clamp(16px, 8vw, 94px);
+  @media screen and (min-width: 1474px) {
+    justify-content: center;
+    > div {
+      flex: 1;
+      max-width: unset !important;
+    }
+  }
+  @media screen and (max-width: 687px) {
+    flex-flow: column nowrap !important;
+    align-items: center;
+
+    > div {
+      margin-right: 0 !important;
+      margin-bottom: 32px;
+      h1,
+      li {
+        text-align: center;
+      }
+    }
+  }
+
+  h1 {
+    font-family: "Noto Serif";
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 26px);
+    line-height: 35px;
+    margin-bottom: 30px;
+    color: #fff5e8;
+  }
+}
+
+.footer-list {
+  &-wrap {
+    width: 100%;
+    &:nth-of-type(1) {
+      margin-right: clamp(32px, 3vw, 48px);
+      max-width: 292px;
+    }
+    &:nth-of-type(2) {
+      margin-right: clamp(48px, 7vw, 89px);
+      max-width: 300px;
+    }
+    &:nth-of-type(3) {
+        max-width : max-content;
+    }
+
+  }
+
+  font-family: "Poppins-Light";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 40px;
+  /* or 200% */
+
+  letter-spacing: 0.03em;
+
+  color: #fff5e8;
+}
+
+.footer-contact {
+  width: 100%;
+  @media screen and (max-width: 687px) {
+    justify-content: center !important;
+  }
+  margin-bottom: 46px;
+  > input {
+    background-color: transparent;
+    border: 1px solid #fff5e8;
+    width: clamp(250px, 40vw, 488.98px);
+    height: clamp(45px, 7vw, 77px);
+    padding-left: 26px;
+    color : utils.$scd-clr;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(255, 245, 232, 0.48);
+    }
+  }
+  > button {
+    width: clamp(32px, 5vw, 74px);
+    height: clamp(45px, 7vw, 77px);
+    background-color: transparent;
+    border: 1px solid #fff5e8;
+
+    > svg {
+        color : utils.$scd-clr;
+        font-size: 20px;
+    }
+  }
+}
+
+
+.footer-social {
+    &-title {
+        h1 {
+            margin-bottom: 21px;
+        }
+    }
+    @media screen and (max-width: 687px) {
+        justify-content: center !important;
+      }
+    a {
+        padding-right: 1em;
+        color : utils.$scd-clr;
+    }
+}

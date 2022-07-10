@@ -1,0 +1,149 @@
+@use "../../../styles/utils" as utils;
+
+.staff-container {
+  min-height: max-content;
+  padding: 32px 0;
+  background-color: utils.$scd-clr;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  @media screen and (max-width: 1150px) {
+    flex-direction: column;
+    .staff-ceo-text,
+    .staff-ceo-img {
+      align-self: center;
+      max-width: 750px;
+      order: 1;
+    }
+    .staff-ceo-text {
+      order: 0;
+    }
+  }
+}
+
+.staff-ceo-img {
+  min-height: max-content;
+  max-width: 750px;
+}
+
+.staff-ceo-text {
+  padding: clamp(40px, 13vw, 123px) clamp(16px, 2.5vw, 32px)
+    clamp(80px, 20vw, 200px) clamp(16px, 6.5vw, 64px);
+  max-width: 610px;
+  background: #473723;
+  align-self: center;
+
+  > h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(25px, 3.5vw, 48px);
+    line-height: 50px;
+    /* identical to box height, or 104% */
+    color: #fdefdd;
+  }
+  p {
+    font-family: "Poppins-Light", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(16px, 2.5vw, 30px);
+    line-height: clamp(30px, 5vw, 50px);
+    color: #fff5e8;
+  }
+}
+
+.thematic-rule {
+  margin: 0;
+  position: relative;
+  border: none;
+  width: 100%;
+  height: clamp(40px, 8vw, 72px);
+  background-color: rgba(255, 228, 194, 0.329);
+}
+
+.team-membrs {
+  &-container {
+    position: relative;
+    width: 100%;
+    padding-top: 32px;
+  }
+
+  &-text {
+    padding-bottom: 32px;
+    max-width: 1007px;
+    width: calc(100% - 2em);
+    margin: 0 auto;
+    flex-flow: column nowrap;
+    > h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(25px, 3.5vw, 48px);
+      line-height: 65px;
+      color: #473723;
+      text-align: center;
+    }
+    > p {
+      font-family: "Poppins-Light", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: clamp(16px, 2.5vw, 30px);
+      line-height: clamp(30px, 5vw, 50px);
+      /* or 167% */
+
+      text-align: center;
+
+      color: #473723;
+    }
+  }
+
+  &-pic {
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 1em clamp(30px, 5vw, 50px);
+    > figure {
+      flex: 1;
+      display: block;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      > figcaption {
+        h1 {
+          font-family: "Times New Roman", Times, serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: clamp(20px, 3vw, 30px);
+          line-height: clamp(30px, 4vw, 40px);
+          /* identical to box height, or 167% */
+          color: #473723;
+          width: max-content;
+          margin: 0 auto;
+        }
+        p {
+          font-family: 'Times New Roman', Times, serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: clamp(16px, 2.5vw, 24px);
+          line-height: clamp(25px, 5vw, 40px);
+          /* identical to box height, or 208% */
+          color: #473723;
+          width: max-content;
+          margin: 0 auto;
+        }
+      }
+      &:nth-of-type(3) {
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-width: 506px) {
+      flex-direction: column;
+      align-items: center;
+
+      > figure {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

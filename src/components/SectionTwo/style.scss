@@ -1,0 +1,233 @@
+@use "../../styles/utils/" as utils;
+.section-two {
+  position: relative;
+  font-size: 16px;
+  padding: clamp(30px, 6.5vw, 81px) 0 clamp(40px, 6.5vw, 80px) 0;
+  width: 100%;
+  max-width: 1474px;
+  margin: 0 auto;
+  background: utils.$scd-clr;
+  color: utils.$pry-clr;
+  @media screen and (max-width: 768px) {
+    padding: clamp(30px, 6.5vw, 81px) clamp(16px, 5vw, 94px) clamp(40px, 6.5vw, 80px);
+  }
+}
+
+.section-two {
+  &-title {
+    width: 100%;
+    align-items: center;
+    --flex-direction: column;
+    margin-bottom: 34px;
+
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 65px;
+      color: utils.$pry-clr;
+    }
+    p {
+      font-family: "Poppins-Light";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(16px, 2vw, 24px);
+      line-height: 30px;
+      text-align: center;
+      color: rgba(71, 55, 35, 0.68);
+      max-width: 193px;
+    }
+  }
+}
+
+.section-two-grid {
+  position: relative;
+  font-size: 14px;
+  display: grid;
+  width: calc(100% - (99px * 2));
+  margin: auto;
+  min-height: calc(100% - 249px);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, clamp(250px, 30vw, 423px));
+  grid-template-areas:
+    "a a b"
+    "c d d";
+  gap: 1em;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    grid-template-rows: repeat(2, clamp(250px, 10vw, 423px));
+    margin: auto;
+    gap: 0.5em;
+  }
+
+  &-item1 {
+    grid-area: a;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: hsla(356, 78%, 28%, 0.25);
+      inset: 0 0 0 0;
+      //  for older browsers
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-item2 {
+    font-size: 14px;
+    grid-area: b;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+  &-item3 {
+    font-size: 14px;
+    grid-area: c;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  &-item4 {
+    grid-area: d;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: hsla(356, 78%, 28%, 0.25);
+      inset: 0 0 0 0;
+      //  for older browsers
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-subitem1,
+  &-subitem2,
+  &-subitem3,
+  &-subitem4 {
+    flex: 1;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: hsla(356, 78%, 28%, 0.25);
+      inset: 0 0 0 0;
+      //  for older browsers
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-subitem1,
+  &-subitem3 {
+    margin-bottom: 14px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.section-two {
+  &-back-arrow, &-next-arrow {
+    position: absolute;
+    top: 0;
+    left: clamp(-83px, -7vw, -60px);;
+    bottom: 0;
+    margin: auto;
+    width: clamp(30px, 5vw, 60px);
+    height: clamp(30px, 5vw, 60px);
+    border-radius: 50%;
+    border: 2px solid utils.$scd-clr;
+    z-index: 1;
+    cursor: pointer;
+    @media screen and (max-width : 768px) {
+       left: 16px;
+    }
+    svg {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      fill: utils.$pry-clr;
+    }
+    &:hover {
+      border: 1px solid utils.$scd-clr;
+      svg {
+        fill: utils.$scd-clr;
+      }
+      &:before {
+        transform: scale(1.1);
+        background-color: hsla(34, 34%, 21%, 0.47);
+        border : 1px solid utils.$scd-clr;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 50%;
+      border: 1px solid utils.$pry-clr;
+    }
+
+    .neutral-btn {
+      width: 100%;
+      height : 100%;
+      display: flex;
+      justify-content: center;
+      align-items : center;
+      border-radius: 50%;
+      &:focus {
+        transform: scale(1.1);
+        background-color: hsla(34, 34%, 21%, 0.47);
+        border: 1px solid utils.$scd-clr;
+        svg {
+          fill: utils.$scd-clr;
+        }
+      }
+    }
+  }
+  &-next-arrow {
+    right: clamp(-83px, -7vw, -60px);
+    left: auto;
+    @media screen and (max-width : 768px) {
+       right: 16px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.gallery-container {
+  height: 663.5247192382812px;
+  max-width: 1478px;
+  margin: 0 auto;
+}
+
+.gallery-hero {
+    min-height: min(90vh, 665px);
+    max-width: 1474px;
+    position: relative;
+   background-image : url("https://res.cloudinary.com/aaeon/image/upload/v1657358995/B-furniture/images/gal-hero_qrkvxh.svg"); 
+   &::before {
+    content: "";
+    position: absolute;
+    min-height: min(90vh, 665px);
+    max-width: 1050px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: hsla(34, 34%, 21%, 0.29);
+    z-index: 1;
+  }
+
+  &::after {
+    min-height: min(90vh, 665px);
+    max-width: 785px;
+    position: absolute;
+    content: "";
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(71, 55, 35, 0.15);
+  }
+
+  h1 {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    max-width: 462px;
+    max-height: min(60vh, 516.65px);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(71, 55, 35, 0.31);
+    font-family: "Poppins-Extra-B", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(50px, 7vw, 64px);
+    line-height: 87px;
+    color: #ffffff;
+    z-index: 2;
+  }  
+
+}
+
+.dec-special-wrap {
+  padding-top: 48px;
+  > h1 {
+    height: clamp(45px, 7vw, 77px);
+    margin: 0 auto;
+    width: clamp(200px, 30vw, 278px);
+    margin-bottom: 48px;
+    background-color: #473723;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    font-family: "Poppins-B", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(20px, 4vw, 36px);
+    line-height: clamp(35px, 4vw, 44px);
+    color : #ffffff;
+  }
+}
+.dec-special-gal {
+  width: calc(100% - 2em);
+  margin: 0 auto;
+  padding-bottom: clamp(56px, 6.7vw, 96px);
+  > div:nth-of-type(1) {
+    margin-right: 1em;
+    min-height: 250px;
+  }
+  > div {
+    > picture{
+      width: 100%;
+      height: 100%;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+
+ 
+
+  

@@ -1,0 +1,14 @@
+.about-container {
+    max-width: 1474px;
+    margin : 0 auto;
+    height: max-content;
+    min-height: 100vh;
+    position: relative;
+}
+
+.about-footer {
+    width: 100%;
+    height: max-content;
+    padding-top : clamp(40px , 7vw, 63px);
+ }
+ 

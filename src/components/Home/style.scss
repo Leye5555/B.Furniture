@@ -1,11 +1,12 @@
-.container {
-    position: relative;
-    width : 100vw;
-    min-height : 100vh;
-   
+.home-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-main {
-    width: 100vw;
-    min-height: 898px;
+.home-main {
+  width: 100vw;
+  min-height: 898px;
 }
+

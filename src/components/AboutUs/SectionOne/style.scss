@@ -1,0 +1,55 @@
+.about-section-one {
+  min-height: min(90vh, 665px);
+  max-width: 1474px;
+  position: relative;
+  margin: 0 auto;
+  background-image: url("https://res.cloudinary.com/aaeon/image/upload/v1656861759/B-furniture/images/about-hero_hhenjl.svg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-height: min(90vh, 665px);
+    max-width: 1050px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: hsla(34, 34%, 21%, 0.29);
+    z-index: 1;
+  }
+
+  &::after {
+    min-height: min(90vh, 665px);
+    max-width: 785px;
+    position: absolute;
+    content: "";
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(71, 55, 35, 0.15);
+  }
+
+  h1 {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    max-width: 462px;
+    max-height: min(60vh, 516.65px);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(71, 55, 35, 0.31);
+    font-family: "Poppins-Extra-B", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(50px, 7vw, 64px);
+    line-height: 87px;
+    color: #ffffff;
+    z-index: 2;
+  }
+}

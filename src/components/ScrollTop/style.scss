@@ -1,0 +1,73 @@
+.scroll-top-btn {
+  position: fixed;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.267);
+  border: none;
+  max-width: 50px;
+  max-height: 50px;
+  width: 50px !important;
+  height: 100% !important;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  &::after {
+    font-size: 0;
+    content: "Scroll to top";
+    position: relative;
+    color: black;
+    width: 13ch;
+    height: max-content;
+    transform: translateX(30px);
+    transition: transform 0.5s ease-in-out, width 1s ease-in-out;
+  }
+  .scroll-top-icon {
+    font-size: clamp(40px, 6vw, 50px);
+    position: absolute;
+    left : 0;
+    right : 0;
+    top : 0;
+    bottom : 0;
+    margin: auto;
+  }
+
+  .scroll-top-icon--active {
+    font-size: clamp(40px, 6vw, 50px);
+    position: relative;
+    left : auto;
+    right : auto;
+    top : auto;
+    bottom : auto;
+    margin: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 0.3em;
+    max-width: max-content;
+    width: 300px !important;
+    transition: width 0.5s ease-in-out;
+    height: 50px;
+    &::after {
+      font-size: clamp(17px, 2.5vw, 20px);
+      width: max-content;
+      height: max-content;
+      transform: translateX(0);
+      padding-left: 5px;
+      transition: transform 0.1s ease-in-out, width 0.1s ease-in-out, font-size 0.4s ease-in-out;
+    }
+  }
+}

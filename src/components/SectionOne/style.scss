@@ -1,0 +1,218 @@
+@use "../../styles/utils" as utils;
+.section-one-wrap {
+  font-size: 16px;
+  padding: 0 16px 20px clamp(16px, 6.5vw, 94px);
+  min-height: 483.56px;
+  width: 100%;
+  max-width: 1474px;
+  margin: 0 auto;
+  background: utils.$pry-clr;
+  color: utils.$scd-clr;
+  @media screen and (max-width: 768px) {
+    padding-left: clamp(16px, 5vw, 94px);
+    --flex-direction: column;
+  }
+  > div {
+    width: 100%;
+    margin-top: clamp(80px, 8vw, 111px);
+  }
+}
+.section-one-grid {
+  font-size: 16px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+.section-one {
+  &-col1 {
+    max-width: max-content;
+    margin-right: clamp(1em, 7.4vw, 108px);
+    @media screen and (min-width: 768px) and (max-width: 1035px) {
+      margin-right: 16px;
+      max-width: 331px;
+    }
+
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 46px;
+      color: utils.$scd-clr;
+      max-width: 363px;
+      width: 100%;
+      margin-bottom: 16px;
+      @media screen and (max-width: 768px) {
+        max-width: unset;
+      }
+    }
+
+    p {
+      font-family: "Poppins-Light";
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(16px, 2.5vw, 23px);
+      line-height: 35px;
+      max-width: 331px;
+      width: 100%;
+      /* or 152% */
+      color: rgba(255, 245, 232, 0.81);
+      margin-bottom: 16px;
+      @media screen and (max-width: 768px) {
+        max-width: unset;
+      }
+    }
+
+    &-btn-wrap {
+      max-width: 230px;
+      max-height: 65px;
+      margin-top: 32px;
+      button {
+        max-width: clamp(160px, 20vw, 230px);
+      }
+    }
+  }
+}
+
+.process-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.section-one {
+  &-col2,
+  &-col3 {
+    @media screen and (max-width: 768px) {
+      --flex-direction: row;
+    }
+    &-row1,
+    &-row2 {
+      height: max-content;
+      width: min(100%, 413px) !important;
+      @media screen and (max-width: 768px) {
+        --flex-direction: row;
+        width: max-content;
+        p,
+        h1 {
+          max-width: 255px;
+          margin-left: clamp(20px, 2vw, 32px);
+        }
+      }
+      @media screen and (max-width: 450px) {
+        min-height: 75px;
+      }
+    }
+    &-row1 {
+      margin-bottom: 41px;
+      margin-right: 20px;
+      @media screen and (max-width: 450px) {
+        margin-right: 10px;
+      }
+    }
+    h1 {
+      // padding-left: 32px;
+      width: min(100%, 341px);
+      font-family: "Times New Roman", Times, serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(16px, 2vw, 32px);
+      line-height: 32px;
+      color: utils.$scd-clr;
+      margin-bottom: 13.5px;
+      button {
+        color: utils.$scd-clr;
+      }
+    }
+
+    p {
+      font-family: "Poppins-Light";
+      font-style: normal;
+      font-size: clamp(12px, 1.5vw, 18px);
+      line-height: 25px;
+      color: utils.$scd-clr;
+      width: min(100%, 255px);
+      @media screen and (max-width: 450px) {
+        &.hidden {
+          display: none !important;
+          opacity: 0;
+        }
+        &.visible {
+          display: block !important;
+          width: 250px;
+          position: absolute;
+          left: clamp(16px, 6.5vw, 94px);
+          opacity: 0;
+          animation: visible 200ms ease-in forwards;
+          @keyframes visible {
+            to {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-text-wrap {
+    flex: 1;
+    justify-content: flex-start;
+    height: max-content;
+    @media screen and (max-width: 768px) {
+      margin-right: 20px;
+      max-width: 255px;
+
+      h1 {
+        margin-left: 0;
+        text-align: left;
+        font-size: clamp(14px, 2vw, 32px);
+      }
+      p {
+        margin-left: 0;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.section-one-icon {
+  flex: 1;
+  max-width: 40px;
+  min-width: 40px;
+  margin-right: clamp(20px, 2vw, 32px);
+  height: 40px;
+  background: utils.$scd-clr;
+  display: grid;
+  place-items: center;
+  @media screen and (max-width: 450px) {
+    margin-right: 10px;
+    max-width: 30px;
+    min-width: 30px;
+    height: 30px;
+    button {
+      display: grid;
+      place-items: center;
+    }
+    button:focus {
+      g {
+        fill: utils.$acc-clr;
+      }
+    }
+  }
+
+  svg {
+    font-size: 24px;
+    g {
+      fill: black;
+    }
+  }
+  .active {
+    g {
+      fill: utils.$acc-clr;
+    }
+  }
+}

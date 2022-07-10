@@ -16,7 +16,7 @@ nav {
     cursor: pointer;
   }
   @media screen and (max-width: 768px) {
-    padding-right: 20px;
+    padding-right: 16px;
   }
 }
 .logo {
@@ -24,13 +24,18 @@ nav {
   width: 100%;
   max-width: calc(171px + 141px);
   height: max-content;
-  padding-left: 97px;
   font-size: 16px;
-
-  @media screen and (max-width: 768px) {
-    padding-left: 20px;
-    padding-right: 0;
+  a {
+    text-decoration: none;
+    width: 100%;
+    padding-left: clamp(60px, 8.5vw, 97px);
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 0;
+    }
   }
+
 
   img {
     display: block;
@@ -149,6 +154,7 @@ nav {
     font-size: clamp(18px, 2vw, 23px);
     margin-bottom: 80px;
     transition: color 0.2s ease-in-out;
+    text-align: center;
 
     &:hover {
       &::after {
@@ -221,11 +227,29 @@ nav {
   }
 }
 
+.hamburger-btn{
+  width: max-content;
+  height: max-content;
+  display : grid;
+  place-items: center;
+  &:hover{
+    cursor: pointer;
+  }
+  &:focus{
+    outline: 1px solid hsla(29, 65%, 34%, 1) !important;
+  }
+  svg {
+    display: block;
+    font-size: 1.7em;
+  }
+}
+
 .active-link {
-  position: relative;
+  position: relative !important;
   color: hsla(29, 65%, 34%, 1) !important;
   font-family: "Poppins-Extra-B", sans-serif;
   transition: color 0.2s ease-in-out;
+  width: 100%;
 
   &:hover {
     color: hsla(29, 65%, 34%, 1);
@@ -248,7 +272,6 @@ nav {
     height: 2px;
     overflow: hidden;
     background-color: hsla(29, 65%, 34%, 1);
-    max-width: 60px;
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
@@ -278,7 +301,6 @@ nav {
     margin: auto;
     height: 2px;
     background-color: hsla(34, 96%, 95%, 0.94);
-    max-width: 60px;
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;

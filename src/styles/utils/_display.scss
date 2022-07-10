@@ -3,6 +3,7 @@
     display: flex;
     gap : var(--gap, 0);
     flex-direction: var(--flex-direction, row);
+    flex-wrap : var(--flex-wrap, nowrap);
 }
 
 .justify-center {
@@ -38,6 +39,9 @@
     text-align: left;
 }
 
+.text-center {
+    text-align: center;
+}
 
 .text-right {
     text-align: right;
