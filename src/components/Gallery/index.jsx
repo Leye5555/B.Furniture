@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation";
 import GalleryTab from "./GalleryTab";
+import ScrollTop from "../ScrollTop";
 import Footer from "../Footer";
 import "./style.scss";
 
@@ -46,6 +47,7 @@ const Gallery = () => {
         </div>
         <Footer />
       </div>
+      <ScrollTop />
     </div>
   );
 };
