@@ -32,10 +32,10 @@ const ScrollTop = () => {
         window.scrollTo(0, 0);
       }}
       type="button"
-      className={isVisible + " " + isScroll}
+      className={"scroll-btn " + isVisible + " " + isScroll}
     >
       <BiUpArrowCircle
-        className={isScroll ? "scroll-top-icon--active" : "scroll-top-icon"}
+        className={(isScroll ? "scroll-top-icon--active" : "scroll-top-icon")}
       />
     </button>
   );
